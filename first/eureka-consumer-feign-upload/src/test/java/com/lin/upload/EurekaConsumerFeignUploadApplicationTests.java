@@ -27,7 +27,8 @@ public class EurekaConsumerFeignUploadApplicationTests {
 
     @Test
     public void testUpload() {
-        File file = new File("upload.txt");
+        String path = this.getClass().getClassLoader().getResource("upload.txt").getPath();
+        File file = new File(path);
         DiskFileItem diskFileItem = (DiskFileItem) new DiskFileItemFactory().createItem(
                 "file", MediaType.TEXT_PLAIN_VALUE, true, file.getName());
         try(FileInputStream fileInputStream = new FileInputStream(file);

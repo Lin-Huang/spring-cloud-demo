@@ -33,6 +33,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+    <!-- 管理子模块的依赖版本 -->
+    <!-- 子模块会使用这里声明的版本号，这里不会引入依赖，子模块需显式声明 -->
     <dependencyManagement>
         <dependencies>
             <!-- Camel BOM -->
