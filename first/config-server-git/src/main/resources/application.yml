@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          # git仓库，存放相关的配置文件
+          uri: https://github.com/Lin-Huang/config-place-demo
+server:
+  port: 1201
+
+# git仓库文件如下：
+# config-demo.yml
+# config-demo-dev.yml
+
+# /{application}/{profile}[/{label}]
+# http://localhost:1201/config-client/dev/master
+# application对应config-demo
+# profile对应dev
+# label对应分支名称

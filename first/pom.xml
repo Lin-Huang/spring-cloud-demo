@@ -26,6 +26,7 @@
         <module>eureka-consumer-feign-upload</module>
         <module>eureka-consumer-ribbon</module>
         <module>eureka-server</module>
+        <module>config-server-git</module>
     </modules>
 
     <properties>
