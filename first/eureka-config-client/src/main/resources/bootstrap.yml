@@ -1,0 +1,20 @@
+# 根据application.name和profile找到相关的配置文件
+spring:
+  application:
+    name: eureka-config-client
+  cloud:
+    config:
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+server:
+  port: 7002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+# 自动刷新需要以下配置
+management:
+  security:
+    enabled: false
